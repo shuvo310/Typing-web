@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Pro - shuvo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Hind+Siliguri:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="fa.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Typing Pro</h1>
+            <p>Hone your typing skills in English and Bangla</p>
+        </header>
+
+        <div class="mode-selector">
+            <button id="practiceMode" class="mode-btn active">Practice Mode</button>
+            <button id="timedMode" class="mode-btn">5 Minute Test</button>
+        </div>
+
+        <div class="language-selector">
+            <button id="loadEnglish" class="lang-btn active">English</button>
+            <button id="loadBangla" class="lang-btn">Bangla (বাংলা)</button>
+        </div>
+
+        <div class="practice-area">
+            <div id="text-to-type-container">
+                <p id="text-to-type">Text to practice will appear here...</p>
+            </div>
+            <textarea id="user-input" placeholder="Start typing here..." rows="8" disabled></textarea>
+        </div>
+
+        <div class="stats-area">
+            <div class="stat-item">
+                <span class="label">Time:</span>
+                <span id="time-elapsed" class="value">0s</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">Speed:</span>
+                <span id="wpm" class="value">0 WPM</span>
+            </div>
+            <div class="stat-item">
+                <span class="label">Accuracy:</span>
+                <span id="accuracy" class="value">0%</span>
+            </div>
+        </div>
+
+        <button id="reset-button">Reset</button> <!-- Text Changed -->
+
+        <footer>
+            <p>Created with <span class="heart">❤</span> by Shuvo</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

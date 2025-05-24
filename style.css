@@ -1,0 +1,270 @@
+:root {
+    --primary-color: #3498db; /* Brighter Blue */
+    --secondary-color: #2ecc71; /* Green for success */
+    --error-color: #e74c3c; /* Red for errors */
+    --light-bg: #ecf0f1;
+    --dark-text: #2c3e50;
+    --light-text: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', 'Hind Siliguri', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for longer content */
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: var(--light-text);
+    padding: 25px 35px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin: 0 0 5px 0;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 0.95em;
+    color: #7f8c8d; /* Muted text */
+    margin: 0;
+}
+
+.language-selector {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.language-selector button {
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    background-color: #bdc3c7; /* Default inactive color */
+    color: var(--dark-text);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.language-selector button.active,
+.language-selector button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-color: var(--primary-color);
+}
+.language-selector button:not(.active):hover {
+     background-color: #95a5a6;
+}
+
+
+.practice-area {
+    margin-bottom: 25px;
+}
+
+#text-to-type-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.7;
+    min-height: 120px;
+    border: 1px solid #dee2e6;
+    overflow-y: auto; /* For longer texts */
+}
+
+#text-to-type .correct {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+#text-to-type .incorrect {
+    color: var(--error-color);
+    background-color: #fadbd8; /* Light red background for incorrect char */
+    text-decoration: underline;
+    font-weight: 500;
+}
+#text-to-type .current-char { /* To highlight the current character to be typed */
+    background-color: #aed6f1;
+    padding: 0 1px;
+    border-radius: 2px;
+}
+
+
+#user-input {
+    width: calc(100% - 24px); /* Account for padding */
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Hind Siliguri', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.stats-area {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item .label {
+    display: block;
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.stat-item .value {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+#reset-button {
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#reset-button:hover {
+    background-color: #27ae60; /* Darker green */
+}
+
+footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+footer .heart {
+    color: var(--error-color);
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+/* ... (আগের সব CSS কোড অপরিবর্তিত থাকবে) ... */
+
+/* New Styles for Mode Selector */
+.mode-selector {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.mode-selector .mode-btn {
+    padding: 10px 18px;
+    border: 2px solid var(--primary-color);
+    background-color: var(--light-text);
+    color: var(--primary-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mode-selector .mode-btn.active,
+.mode-selector .mode-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+}
+
+.language-selector {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.language-selector .lang-btn { /* Changed class name */
+    padding: 10px 18px; /* Adjusted padding */
+    border: 2px solid transparent;
+    background-color: #bdc3c7;
+    color: var(--dark-text);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.language-selector .lang-btn.active,
+.language-selector .lang-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-color: var(--primary-color); /* Keep border for consistency */
+}
+.language-selector .lang-btn:not(.active):hover {
+     background-color: #95a5a6;
+}
+
+#reset-button { /* Small style update for consistency */
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Already there, just noting */
+    letter-spacing: 0.5px; /* Already there */
+}
+
+/* ... (বাকি CSS কোড অপরিবর্তিত থাকবে) ... */
+
+
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
